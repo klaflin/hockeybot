@@ -29,8 +29,9 @@ module.exports = {
 			//zippers the questions to their options
 			const qSets = questions.map((q,i) => [q, optionSet[i]]);
 
-			const starsEmoji = message.guild.emojis.cache.find(starsEmoji => starsEmoji.name === 'dstars');
-			//console.log(starsEmoji);
+			const starsEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'd_stars');
+      		const bluesEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'blues');
+      		const bruinsEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'bruins');
 
 			//creates an embed of a question and its answers
 			function printQuestion(q, as) {
@@ -43,12 +44,17 @@ module.exports = {
 							value: as,
 						}
 					])
-				return message.channel.send(upcomingEmbed).then(embedMessage => {
-		      		embedMessage.react('739642783500861563'); //stars emoji
-				    embedMessage.react('739641453936115745'); //blues emoji
-				    embedMessage.react('739641454460272720'); //bruins emoji
-				    //.catch(() => console.error('Emojem failed to react.')); 
-		    	}); 
+				return message.channel.send(upcomingEmbed)
+				.then(embedMessage => {
+					try {
+		      		embedMessage.react(starsEmoji); //stars emoji
+				    embedMessage.react(bluesEmoji); //blues emoji
+				    embedMessage.react(bruinsEmoji); //bruins emoji
+					} catch(error) {
+						console.error('One of the emojis failed to react.')
+					}
+				})
+		    	; 
 			}
 
 			qSets.forEach(printQuestion);

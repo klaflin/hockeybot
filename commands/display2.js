@@ -27,23 +27,16 @@ module.exports = {
       } 
       //condenses the option set from an array of arrays of strings to an array of strings w each option on a new line
       const optionSet = options.map(array => array.map(option => option + '\n').join(""));
-      const emojiSet = emojis.map(String);
-      //zippers the questions to their options
+      //finds emoji cache with given emoji name from array
+      //** unnas i know this sucks pls make it a better thing 
+      const emojiSet = emojis.map(array => array.map(emojiName => message.guild.emojis.cache.find(emoji => emoji.name === emojiName)));
+      //zippers the questions to their options and emojis
       const questionSets = questions.map((q,i) => [q, optionSet[i], emojiSet[i]]);
 
-      console.log(emojiSet)
-
-      //const starsEmoji = message.guild.emojis.cache.find(starsEmoji => starsEmoji.name === 'dstars');
-      const starsEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'dstars');
-      //console.log(starsEmoji);
-
-      function addReact(em) {
-        let array = em;
-        array.forEach(id => embedMessage.react(id))
-      }
+      console.log(questionSets);
 
       //creates an embed of a question and its answers
-      function printQuestion(q, as, em) {
+       function printQuestion(q, as, em) {
         let emojiArray = em;
         const upcomingEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
@@ -54,9 +47,17 @@ module.exports = {
               value: as,
             }
           ])
-        return message.channel.send(upcomingEmbed).then(embedMessage => {
-              emojiArray.forEach(id => embedMessage.react(id))
-            //.catch(() => console.error('Emojem failed to react.')); 
+        return message.channel.send(upcomingEmbed).then(async embedMessage => {
+          try {
+               await emojiArray.forEach(id => embedMessage.react(id));
+                /* for testing emoji display: 
+                await embedMessage.react('🍎');
+                await embedMessage.react('🍊');
+                await embedMessage.react('🍇');*/
+              } catch (error) {
+                console.error('One of the emojis failed to react.');
+              }
+              //emojiArray.forEach(id => embedMessage.react(id))
           }); 
       }
 
