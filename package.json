@@ -1,0 +1,23 @@
+{
+  "name": "hockeybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hockeybot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klaflin/hockeybot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klaflin/hockeybot/issues"
+  },
+  "homepage": "https://github.com/klaflin/hockeybot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "eslint": "^7.6.0"
+  }
+}
