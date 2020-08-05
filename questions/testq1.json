@@ -1,0 +1,6 @@
+{
+	"questions" : ["Who is the best team in the league?","What team will win the Cup?"],
+	"options" : [["stars", "blues", "bruins"], ["stars", "blues"]],
+	"emojis" : [["739642783500861563", "739641453936115745", "739641454460272720"], ["739642783500861563", "739641453936115745"]]
+
+}
