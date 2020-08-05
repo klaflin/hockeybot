@@ -103,4 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-
+# Discord config file (token cant be pushed)
+config.json
