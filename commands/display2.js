@@ -18,25 +18,28 @@ module.exports = {
       const { questions, options, emojis } = require(questionFile);
 
       //for debugging:
-      console.log(questions);
-      console.log(options);
-      console.log(emojis);
+      //console.log(questions);
+      //console.log(options);
+      //console.log(emojis);
 
       if(!(questions.length === options.length) || !(questions.length === emojis.length)) {
         return message.reply('Invalid set of questions and answers.')
-      } 
+      }
+
       //condenses the option set from an array of arrays of strings to an array of strings w each option on a new line
       const optionSet = options.map(array => array.map(option => option + '\n').join(""));
-      //finds emoji cache with given emoji name from array
-      //** unnas i know this sucks pls make it a better thing 
-      const emojiSet = emojis.map(array => array.map(emojiName => message.guild.emojis.cache.find(emoji => emoji.name === emojiName)));
-      //zippers the questions to their options and emojis
-      const questionSets = questions.map((q,i) => [q, optionSet[i], emojiSet[i]]);
 
-      console.log(questionSets);
+      //finds emoji cache with given emoji name from array
+      // unnas i know this sucks pls make it a better thing 
+      // kellie this is the best line of code i've ever seen
+      const emojiSet = emojis.map(array => array.map(emojiName => message.guild.emojis.cache.find(emoji => emoji.name === emojiName)));
+
+      //zippers the questions to their options and emojis into a list:
+      const questionSets = questions.map((q,i) => [q, optionSet[i], emojiSet[i]]);
 
       //creates an embed of a question and its answers
        function printQuestion(q, as, em) {
+        console.log("q: " + q)
         let emojiArray = em;
         const upcomingEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
@@ -49,18 +52,19 @@ module.exports = {
           ])
 
         return message.channel.send(upcomingEmbed).then(async embedMessage => {
-          try {
-               await emojiArray.forEach(id => embedMessage.react(id));
-                 //for testing emoji display: 
-                /*await embedMessage.react('🍎');
-                await embedMessage.react('🍊');
-                await embedMessage.react('🍇');*/
-              } catch (error) {
-                console.error('One of the emojis failed to react.');
-              } 
-          }); 
+          for(id of emojiArray) {
+            try{
+                embedMessage.react(id);
+            } catch (error) {
+                console.error(id + " react failed:" + error.message);
+            }                
+          }  
+        });
       }
 
-      questionSets.forEach(printQuestion);
+      // unzip the question list and print it
+      for(q of questionSets) {
+        printQuestion(q[0], q[1], q[2])
+      }
     }
   }} 
