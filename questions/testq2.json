@@ -1,0 +1,6 @@
+{
+	"questions" : ["Which fruit?"],
+	"options" : [["Apple 🍎", "Orange 🍊", "Grape 🍇"]],
+	"emojis" : [["🍎", "🍊", "🍇"]]
+
+}

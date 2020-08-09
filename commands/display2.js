@@ -47,17 +47,17 @@ module.exports = {
               value: as,
             }
           ])
+
         return message.channel.send(upcomingEmbed).then(async embedMessage => {
           try {
                await emojiArray.forEach(id => embedMessage.react(id));
-                /* for testing emoji display: 
-                await embedMessage.react('🍎');
+                 //for testing emoji display: 
+                /*await embedMessage.react('🍎');
                 await embedMessage.react('🍊');
                 await embedMessage.react('🍇');*/
               } catch (error) {
                 console.error('One of the emojis failed to react.');
-              }
-              //emojiArray.forEach(id => embedMessage.react(id))
+              } 
           }); 
       }
 
