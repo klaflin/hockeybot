@@ -32,7 +32,10 @@ module.exports = {
       //finds emoji cache with given emoji name from array
       // unnas i know this sucks pls make it a better thing 
       // kellie this is the best line of code i've ever seen
-      const emojiSet = emojis.map(array => array.map(emojiName => message.guild.emojis.cache.find(emoji => emoji.name === emojiName)));
+      //no actually it sucks because it only works in a very specific context and its too long 
+      const emojiSet = emojis.map(array => array.map(
+        emojiName => message.guild.emojis.cache.find(
+            emoji => emoji.name === emojiName))); 
 
       //zippers the questions to their options and emojis into a list:
       const questionSets = questions.map((q,i) => [q, optionSet[i], emojiSet[i]]);

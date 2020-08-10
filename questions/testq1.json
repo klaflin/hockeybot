@@ -1,6 +1,6 @@
 {
 	"questions" : ["Who is the best team in the league?","What team will win the Cup?"],
 	"options" : [["stars", "blues", "bruins"], ["stars", "blues"]],
-	"emojis" : [["d_stars", "blues", "bruins"], ["d_stars", "blues"]]
+	"emojis" : [["dstars", "blues", "bruins"], ["dstars", "blues"]]
 
 }
