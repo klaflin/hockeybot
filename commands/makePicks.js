@@ -1,5 +1,5 @@
 const fs = require('fs');
-const files = 'Acceptable filenames include:\ntestq1,';
+const files = 'Acceptable filenames include:\ntestq1,\ntestq2,\nround1';
 
 module.exports = {
   name: 'makepicks',
