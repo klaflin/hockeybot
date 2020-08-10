@@ -1,6 +1,6 @@
 {
   "name": "hockeybot",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "the best hockey-related robot every made",
   "main": "hockeybot.js",
   "scripts": {
