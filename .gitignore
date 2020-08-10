@@ -105,3 +105,5 @@ dist
 
 # Discord config file (token cant be pushed)
 config.json
+
+package-lock.json
