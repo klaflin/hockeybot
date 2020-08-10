@@ -2,7 +2,7 @@ const fs = require('fs');
 const files = 'Acceptable filenames include:\ntestq1,';
 
 module.exports = {
-  name: 'display2',
+  name: 'makepicks',
   description: `Displays the given question and its answers. ${files}`,
   usage: '[command name filename]',
   cooldown: 5,
