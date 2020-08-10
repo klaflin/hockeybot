@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klaflin/hockeybot.git"
+    "url": "git+https://github.com/unbun/hockeybot.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/klaflin/hockeybot/issues"
+    "url": "https://github.com/unbun/hockeybot/issues"
   },
-  "homepage": "https://github.com/klaflin/hockeybot#readme",
+  "homepage": "https://github.com/unbun/hockeybot#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
     "request": "2.81.0",
