@@ -26,16 +26,22 @@ module.exports = {
         return message.reply('Invalid set of questions and answers.')
       }
 
+      function getEmojiCache (array){
+        let guildCache = array.map(emojiName => message.guild.emojis.cache.find(emoji => emoji.name === emojiName));
+        if (guildCache[0] == undefined){
+          return array;
+        } else {
+          return guildCache;
+        }}
+
       //condenses the option set from an array of arrays of strings to an array of strings w each option on a new line
       const optionSet = options.map(array => array.map(option => option + '\n').join(""));
 
       //finds emoji cache with given emoji name from array
       // unnas i know this sucks pls make it a better thing 
       // kellie this is the best line of code i've ever seen
-      //no actually it sucks because it only works in a very specific context and its too long 
-      const emojiSet = emojis.map(array => array.map(
-        emojiName => message.guild.emojis.cache.find(
-            emoji => emoji.name === emojiName))); 
+      //well guess what i fixed it with ~abstraction~ so who is the real master hacker here 
+      const emojiSet = emojis.map(getEmojiCache);
 
       //zippers the questions to their options and emojis into a list:
       const questionSets = questions.map((q,i) => [q, optionSet[i], emojiSet[i]]);
