@@ -1,0 +1,38 @@
+{
+	"questions" : ["Who will win this series?",
+				"Who will win this series?",
+				"Who will win this series?",
+				"Who will win this series?",
+				"Who will win this series?",
+				"Who will win this series?",
+				"Who will win this series?",
+				"Who will win this series?",
+				"Which of these players will record the most points in the First Round?",
+				"What will be the most common series result in the First Round?",
+				"How many games will go to overtime in the First Round?"],
+	
+	"options" : [["#1 Vegas Golden Knights", "#12 Chicago Blackhawks"], 
+				["#2 Colorado Avalanche", "#11 Arizona Coyotes"],
+				["#3 Dallas Stars", "#8 Calgary Flames"],
+				["#4 St. Louis Blues", "#7 Vancouver Canucks"],
+				["#1 Philadelphia Flyers", "#12 Montreal Canadiens"],
+				["#2 Tampa Bay Lightning", "Columbus Blue Jackets"],
+				["#4 Boston Bruins", "#6 Carolina Hurricanes"],
+				["#3 Washington Capitals", "#7 New York Islanders"],
+				["Sebastian Aho - Caroline Hurricanes", "Nathan MacKinnon - Colorado Avalanche", "David Pastrnak - Boston Bruins", "Jonathan Toews - Chicago Blackhawks"],
+				["4 Games", "5 Games", "6 Games", "7 Games"],
+				["Free response--Tiebreaker"]],
+	
+	"emojis" : [["knights", "blackhawks"], 
+				["avalanche", "coyotes"],
+				["dstars", "flames"],
+				["blues", "canucks"],
+				["flyers", "canadiens"],
+				["lightning", "blue_jackets"],
+				["bruins", "hurricanes"],
+				["capitals", "islanders"],
+				["hurricanes", "avalanche", "bruins","blackhawks"],
+				["four", "five", "six", "seven"],
+				[""]]
+
+}
