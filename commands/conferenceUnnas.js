@@ -8,8 +8,8 @@ module.exports = {
   	const Discord = require('discord.js');
 
 const unnasImage = new Discord.MessageEmbed()
-	.attachFiles(['../images/unnasconference.png'])
+	.attachFiles('../images/unnasconference.png')
 	.setImage('attachment://unnasconference.png');
 
-return channel.send(unnasImage);
+return message.channel.send(unnasImage);
 }}
