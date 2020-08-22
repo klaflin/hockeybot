@@ -1,0 +1,38 @@
+{
+	"questions" : ["Will any series go to a Game 7?",
+				"Will any series end a sweep?",
+				"Which of these teams will score the most goals in the second round?",
+				"Who will record more saves in the Second Round?",
+				"How many shutouts will there be in the Second Round?",
+				"How many goals will be scored in the Second Round?",
+				"Who will win this series?",
+				"Will Brayden Point (TB) and Mark Stone (VGS) score a goal in the Second Round?",
+				"Who will win this series?",
+				"Who will win this series?",
+				"Who will win this series?",],
+	
+	"options" : [["Yes", "No"], 
+				["Yes", "No"],
+				["Vegas Golden Knights", "Tampa Bay Lightning", "Boston Bruins", "Colorado Avalanche"],
+				["Philipp Grubauer - Colorado Avalanche", "Andrei Vasilevskiy - Tampa Bay Lightning"],
+				["🇦: 0 - 3", "🇧: 4 - 6", "🇨: 7 - 9", "🇩: 10 or More"],
+				["🇦: 0 - 60", "🇧: 61 - 90", "🇨: 91 - 110", "🇩: 111 or More"],
+				["#2 Colorado Avalanche", "#3 Dallas Stars"],
+				["Yes", "No"],
+				["#2 Tampa Bay Lightning", "#4 Boston Bruins"],
+				["#1 Vegas Golden Knights", "#5 Vancouver Canucks"],
+				["#1 Philadelphia Flyers", "#7 New York Islanders"]],
+	
+	"emojis" : [["👍", "👎"], 
+				["👍", "👎"],
+				["knights", "lightning", "bruins", "avalanche"],
+				["avalanche", "lightning"],
+				["🇦", "🇧", "🇨", "🇩"],
+				["🇦", "🇧", "🇨", "🇩"],
+				["avalanche", "dstars"],
+				["👍", "👎"],
+				["lightning", "bruins"],
+				["knights", "canucks"],
+				["flyers", "islanders"]]
+
+}
