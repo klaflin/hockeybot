@@ -1,10 +1,10 @@
 const fs = require('fs');
-const files = 'Acceptable filenames include:\ntestq1,\ntestq2,\nround1';
+const files = 'Acceptable filenames include:\ntestq1,\ntestq2,\nround1,\nround2';
 
 module.exports = {
   name: 'makepicks',
   description: `Displays the given question and its answers. ${files}`,
-  usage: '[command name filename]',
+  usage: '[filename]',
   cooldown: 5,
   execute(message, args) {
     const Discord = require('discord.js');
