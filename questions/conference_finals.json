@@ -1,0 +1,38 @@
+{
+	"questions" : ["Who will win this series?",
+				"How many games will be played in the Western Conference Finals?",
+				"Who will record more shots on goal in the Western Conference Finals?",
+				"Which of these players will record the most points in the Conference Finals?",
+				"Will either series go to a Game 7?",
+				"Will any player score 5 goals or more in either series?",
+				"How many games will go to overtime in the Conference Finals?",
+				"Which of these goaltenders will record the highest save percentage in the Conference Finals?",
+				"Who will win this series?",
+				"How many games will be played in the Eastern Conference Finals?",
+				"Who will record more shots on goal in the Eastern Conference Finals?"],
+	
+	"options" : [["#3 Dallas Stars", "#1 Vegas Golden Knights"], 
+				["4", "5", "6", "7"],
+				["Joe Pavelski - Dallas Stars", "Nate Schmidt - Vegas Golden Knights"],
+				["Miro Heiskanen - Dallas Stars", "Brayden Point - Tampa Bay Lightning", "Shea Theodore - Vegas Golden Knights", "Josh Bailey - New York Islanders"],
+				["Yes", "No"],
+				["Yes", "No"],
+				["🇦: 0 - 2", "🇧: 3 - 4", "🇨: 5 - 6", "🇩: 7 or More"],
+				["Andrei Vasilevksiy - Tampa Bay Lightning", "Anton Khudobin - Dallas Stars", "Robin Lehner - Vegas Golden Knights", "Semyon Varlamov - New York Islanders"],
+				["#2 Tampa Bay Lightning", "#6 New York Islanders"],
+				["4", "5", "6", "7"],
+				["Ondrej Palat - Tampa Bay Lightning", "Anders Lee - New York Islanders"]],
+	
+	"emojis" : [["dstars", "knights"], 
+				["4️⃣", "5️⃣", "6️⃣", "7️⃣"],
+				["dstars", "knights"],
+				["dstars", "lightning", "knights", "islanders"],
+				["👍", "👎"],
+				["👍", "👎"],
+				["🇦", "🇧", "🇨", "🇩"],
+				["lightning", "dstars", "knights", "islanders"],
+				["lightning", "islanders"],
+				["4️⃣", "5️⃣", "6️⃣", "7️⃣"],
+				["lightning", "islanders"]]
+
+}
